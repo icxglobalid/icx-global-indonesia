@@ -1,0 +1,736 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --biru-tua: #08083D;
+    --biru-utama: #2563EB;
+    --putih: #FFFFFF;
+    --transparan: rgba(0, 0, 0, 0.45);
+}
+
+body {
+    font-family: 'Bree Serif', serif;
+    color: var(--putih);
+    line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* === NAVIGASI — TINGGI KECIL, WARNA PUTIH RAPI === */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 5px 0px;
+    background: transparent;
+}
+
+.nav-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--biru-tua);
+    opacity: 1;
+    padding: 5px 30px;
+    line-height: 1;
+    height: 48px;
+    border-radius: 35px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+/* Nama Perusahaan — PASTI PUTIH */
+.nav-brand {
+    color: var(--putih) !important;
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Menu — SEJAJAR KE KANAN */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto; /* Dorong ke kanan */
+    margin-right: 15px;
+}
+
+.nav-menu li a {
+    color: var(--putih) !important;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    transition: background 0.2s;
+    line-height: 1;
+}
+.nav-menu li a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.lang-switch {
+    display: flex;
+    gap: 5px;
+}
+.lang-btn {
+    border: none;
+    background: transparent;
+    color: var(--putih) !important;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Bree Serif', serif;
+    font-size: 0.8rem;
+}
+.lang-btn.active {
+    background: var(--biru-utama);
+    font-weight: bold;
+}
+
+/* === HERO — TEPAT DI BAWAH MENU === */
+.hero {
+    position: relative;
+    height: calc(100vh - 0px);
+    margin-top: 0px;
+    overflow: visible;
+    padding: 0;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 1;
+    border-bottom-left-radius: 10% 8%;
+    border-bottom-right-radius: 10% 8%;
+
+    filter:drop-shadow(0 10px 16px rgba(0,0,0,0.35))
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(134, 134, 136, 0.5);
+    z-index: 2;
+    border-bottom-left-radius: 10% 8%;
+    border-bottom-right-radius: 10% 8%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px;
+}
+
+.logo-top-left {
+    position: absolute;
+    top: 110px; left: 45px;
+    max-width: 160px;
+}
+.map-top-right {
+    position: absolute;
+    top: 90px; right: 60px;
+    max-width: 600px;
+    opacity: 0.95;
+}
+.hero-title {
+    position: absolute;
+    top: 55%; left: 22%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #08083D;
+}
+.countdown-box {
+    position: absolute;
+    top: 70%; left: 58px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    background: rgba(4, 4, 83, 0.4);
+    border-radius: 16px;
+    padding: 18px 25px;
+    gap: 15px;
+    backdrop-filter: blur(8px);
+}
+.count-item {
+    text-align: center;
+    min-width: 60px;
+}
+.count-item span {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+}
+.count-item p {
+    font-size: 0.8rem;
+    opacity: 0.85;
+    margin-top: 4px;
+}
+.target-date {
+    border-left: 1px solid rgba(255,255,255,0.3);
+    padding-left: 15px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* === TENTANG KAMI === */
+.about-section {
+    width: 100%;
+    max-width: 1370px;
+    margin: 80px auto 0 auto;
+    position: relative;
+    padding: 0;
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+
+    border:4px solid #08083D;
+    border-radius: 24px;
+    overflow: hidden;
+
+    filter:drop-shadow(0 10px 16px rgba(0,0,0,0.35))
+}
+.about-blue-full {
+    width: 100%;
+    background-color: var(--biru-tua);
+    min-height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+.about-building-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    z-index: 1;
+}
+.about-transparent-shape {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,0.08);
+    z-index: 2;
+}
+.about-text-layer {
+    position: relative;
+    z-index: 3;
+    padding: 30px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* === JUDUL DI KOTAK MELENGKUNG TERPISAH === */
+.about-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    margin-top: 40px;
+    padding: 10px 35px; /* Atur ini — kiri-kanan makin kecil makin pendek */
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+    display: inline-block; /* Penting! Ikut panjang teks */
+    position: relative;
+    color: #FFFFFF!important;
+    text-align: center;
+    white-space: nowrap; /* Biar nggak turun ke baris baru */
+    width: auto; /* Lebar otomatis pas sama tulisan */
+    margin-left: 70px;
+    z-index: 10;
+    
+}
+
+/* === KOTAK TRANSPARAN TEKS === */
+.about-text-box {
+    background: rgba(192, 192, 197, 0.4); /* Abu-abu transparan */
+    padding: 25px 30px;
+    border-radius: 24px;
+    backdrop-filter: blur(1px);
+    z-index: 1;
+    color: white;
+    position: relative;
+    line-height: 1.7;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 10px; /* Jarak judul ke kotak */
+    margin-bottom: 50px;
+    width: 90%;
+    height: auto;
+    display: block;
+}
+
+.about-text {
+    font-size: 0.95rem;
+    text-align: justify;
+    line-height: 1.7;
+    opacity: 1; /* Teks jelas */
+    color: #FFFFFF !important;
+}
+
+/* RESPONSIF */
+@media (max-width: 900px) {
+    .nav-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 15px;
+    }
+    .nav-brand { width: 100%; text-align: center; margin-bottom: 5px; }
+    .nav-menu { margin-left: 0; margin-right: 0; justify-content: center; width: 100%; order: 3; }
+    .lang-switch { position: absolute; top: 12px; right: 15px; }
+    .hero { margin-top: 80px; height: calc(100vh - 80px); }
+    .logo-top-left, .map-top-right { position: relative; top: 0; left: 0; right: 0; margin: 10px auto; display: block; }
+    .hero-title { position: relative; top: 0; left: 0; transform: none; margin: 20px 0; }
+    .countdown-box { position: relative; top: 0; left: 0; transform: none; flex-wrap: wrap; justify-content: center; margin: 20px; }
+    .target-date { border-left: none; padding-left: 0; margin-top: 10px; width: 100%; text-align: center; }
+    .about-text-layer { padding: 20px 25px; }
+}
+.marquee-container {
+    position: fixed;    /* TERKUNCI — tidak pindah ke mana-mana */
+    bottom: 0;          /* DI BAWAH LAYAR — persis garis yang kamu lingkari */
+    left: 0;
+    width: 100%;        /* Penuh dari kiri sampai kanan */
+    background-color:rgba(0, 0, 0, 0.85);
+    padding: 2px 0;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    z-index: 9999;
+    overflow: hidden;
+    margin: 0;
+}
+
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    color: #FFFFFF;
+    font-size: 0,5rem;
+    font-weight: 300;
+    padding-left: 100%;
+    animation: jalanKiri 45s linear infinite;
+}
+
+@keyframes jalanKiri {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+/* ==========================================
+   VISI — DENGAN CELAH DI KEDUA SISI
+   ========================================== */
+
+.visi-misi-section {
+    margin-top: 20px ;  /* ← JARAK KE BAWAH — PASTI MUNCUL */
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1pt;
+    margin-bottom: 1px;
+}
+.visi-row {
+    display: flex;
+    align-items: center;
+    gap: 260px;  /* ← CELAH antara kotak Visi dan Logo */
+    width: 100%;
+}
+
+.visi-box {
+    flex: 1;
+    min-width: 0;
+    background-color: #08083D;
+    color: #FFFFFF;
+    padding: 18px 22px;  /* ← diperkecil biar nggak terlalu renggang */
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    margin-left: -80px;
+}
+
+.visi-box p {
+    margin: 0;
+    line-height: 1.6;
+    text-align: justify;  /* ← RATA KIRI-KANAN ✅ */
+}
+.visi-logo-kanan {
+    flex-shrink: 0;
+    margin-right: 1px;  /* ← CELAH kecil di sebelah kanan logo */
+}
+
+.visi-logo-kanan img {
+    height: 110px;
+    width: auto;
+    display: block;
+}
+
+.visi-label {
+    display: inline-block;
+    background-color: #979ba0;
+    color: #FFFFFF;
+    padding: 6px 50px;
+    border-radius: 20px;
+    font-weight: 40px bold;
+    margin-bottom: 12px;
+}
+
+.visi-box p {
+    margin: 0;
+    line-height: 1.6;
+}
+/* ==========================================
+   MISI — Nomor di Kiri, Tulisan di Tengah
+   ========================================== */
+
+.misi-section {
+    padding: 50px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.misi-header {
+    background-color: #979ba0;
+    color: #FFFFFF;
+    padding: 6px 50px;
+    border-radius: 20px;
+    font-weight: 40px bold;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    transform: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.60);
+}
+.misi-container{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.misi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px 20px;
+    margin: 0;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    transform: none;
+}
+
+.misi-card {
+    background-color: #08083D;
+    color: #FFFFFF;
+    padding: 25px 22px;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.60);
+    border-radius: 20px;
+}
+
+.misi-num {
+    width: 70px;        /* ← LEBIH LEBAR biar lonjong */
+    height: 30px;       /* ← tinggi sedikit */
+    background-color: #979ba0;
+    border-radius: 20px; /* ← UBANG BUKAT UJUNGNYA */
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    margin-right: auto;
+}
+/* KOTAK 1 & 3 — MELEBAR KE KIRI */
+.misi-card:nth-child(1),
+.misi-card:nth-child(3) {
+    margin-left: -15px;  /* ← makin besar angkanya, makin ke KIRI */
+}
+
+/* KOTAK 2 & 4 — MELEBAR KE KANAN */
+.misi-card:nth-child(2),
+.misi-card:nth-child(4) {
+    margin-right: -15px; /* ← makin besar angkanya, makin ke KANAN */
+}
+.misi-card p{
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: justify;
+    text-align-last: left;
+}
+
+@media (max-width: 768px) {
+    .misi-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.garis-pembatas-halaman {
+    width: 100%;           /* MEMANJANG PENUH kiri-kanan */
+    height: 35px;           /* TEBAL garis — naikkan angka makin tebal */
+    background-color: #08083D; /* warna biru tua ICX */
+    margin: -25px 0 40px 0;        /* jarak atas-bawah garis */
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.60);
+    border-radius: 20px; /* ← UBANG BUKAT UJUNGNYA */
+}
+.nilai-bidang-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 0;
+}
+
+.nilai-card,
+.bidang-card {
+    padding: 30px;
+    border-radius: 16px;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.90);
+    border-radius: 20px; /* ← UBANG BUKAT UJUNGNYA */
+}
+
+.kegiatan-card{
+    padding: 30px;
+    border-radius: 16px;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.90);
+    border-radius: 20px; /* ← UBANG BUKAT UJUNGNYA */
+}
+
+.nilai-card {
+    background-color: #6B7280; /* abu-abu sama seperti desain */
+}
+
+.kegiatan-card {
+    background-color: #08083D; /* biru tua sama seperti desain */
+}
+
+.nilai-card h3,
+.bidang-card h3 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+}
+.kegiatan-card h3,
+.bidang-card h3 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+}
+.garis-pembatas-struktur {
+    width: 100%;           /* MEMANJANG PENUH kiri-kanan */
+    height: 35px;           /* TEBAL garis — naikkan angka makin tebal */
+    background-color: #08083D; /* warna biru tua ICX */
+    margin: 40px 0 40px 0;        /* jarak atas-bawah garis */
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.60);
+    border-radius: 20px; /* ← UBANG BUKAT UJUNGNYA */
+}
+.animasi-muncul {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease; /* ganti dari animation ke transition */
+}
+
+/* Kelas ini yang ditambahkan pas kelihatan */
+.animasi-muncul.terlihat {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* BAGIAN STRUKTUR ORGANISASI */
+.struktur-section {
+    padding: 60px 5%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.struktur-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #08083D;
+    margin-bottom: -5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* TEMPAT GAMBAR STRUKTUR ORGANISASI */
+.struktur-gambar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.struktur-section h3{
+    font-size: 22px;
+    font-weight: 600;
+    color: #08083D;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* ==================== BAGIAN KONTAK ==================== */
+
+.kontak-section {
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.kontak-box {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    background-color: #08083D;
+    border-radius: 100px 100px 0 0;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(8, 8, 61, 0.25);
+    padding: 0 40px 40px;
+    color: #ffffff;
+}
+
+/* Lengkung atas */
+.kontak-lengkung-atas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #08083D;
+    border-bottom-left-radius: 50% 70%;
+    border-bottom-right-radius: 50% 70%;
+    z-index: 1;
+}
+
+/* Logo ICX */
+.kontak-logo {
+    position: relative;
+    z-index: 2;
+    padding-top: 25px;
+}
+
+.kontak-logo img {
+    width: 130px;
+    height: auto;
+}
+
+/* Layout dua kolom */
+.kontak-inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 58% 38%;
+    gap: 4%;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+/* Kolom kiri */
+.kontak-left {
+    text-align: justify;
+}
+
+.kontak-description {
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.kontak-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.kontak-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.kontak-info-item img {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.kontak-info-item span {
+    font-size: 15px;
+}
+
+/* Kolom kanan */
+.kontak-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-top: 0px;
+    margin-top: -80px;
+    margin-left: 60px;
+}
+
+.kontak-pdf-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.kontak-pdf-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.kontak-pdf-link:hover {
+    opacity: 0.85;
+}
+
+.kontak-pdf-link img {
+    width: 30px;
+    height: 30px;
+}
+
+.kontak-pdf-link span {
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+/* Grafik investasi di bawah PDF */
+.kontak-chart {
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.kontak-chart img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+}
