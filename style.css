@@ -1,8 +1,44 @@
+/* ===== TAMPILAN RAPI DI HP ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Menu navigasi rapi di HP */
+nav {
+  flex-wrap: wrap;
+}
+
+/* Semua section menyesuaikan layar */
+section {
+  width: 100%;
+  padding: 15px;
+}
+
+/* Kotak hitung mundur menyesuaikan */
+.countdown-box {
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 :root {
     --biru-tua: #08083D;
