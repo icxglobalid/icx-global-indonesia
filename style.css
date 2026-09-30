@@ -770,3 +770,41 @@ ul { list-style: none; }
     height: auto;
     border-radius: 12px;
 }
+/* ===== PERBAIKAN KHUSUS HP ===== */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  header, nav, .hero, section, footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .hero-img, .peta-indonesia, .logo-hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+  }
+
+  nav a {
+    font-size: 13px !important;
+    padding: 6px 8px !important;
+  }
+
+  .countdown-box {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .kotak-tentang {
+    width: 95% !important;
+    margin: 0 auto !important;
+  }
+}
