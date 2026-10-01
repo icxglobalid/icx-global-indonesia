@@ -26,7 +26,7 @@ const translations = {
         bidang_kegiatan_judul:"Bidang Kegiatan",
         text_bidang_kegiatan:"PT ICX GLOBAL INDONESIA berpegang pada integritas, profesionalisme, disiplin, dan inovasi. Kami menjaga kepercayaan mitra melalui transparansi, akuntabilitas, dan komitmen terhadap hasil terbaik. Setiap langkah kami didasari pada prinsip pengelolaan sumber daya yang bertanggung jawab, efisien, dan berkelanjutan. Kami juga mengutamakan keselamatan, kesehatan, dan kesejahteraan dalam setiap operasi, serta membangun hubungan yang saling percaya, kolaboratif, dan berkelanjutan dengan seluruh pemangku kepentingan. ",
         struktur_organisasi_judul:"STRUKTUR ORGANISASI",
-        tect_penutup_kontak:"PT ICX GLOBAL INDONESIA berkomitmen untuk terus mengembangkan aset dan perusahaan melalui pengelolaan modal internal yang terarah, strategi tepat, disiplin, integritas, dan profesionalisme. Kami berorientasi pada pertumbuhan serta penciptaan nilai perusahaan secara berkelanjutan. Terima kasih telah mempercayai PT ICX GLOBAL INDONESIA. Kami terus melangkah menjadi perusahaan yang profesional, adaptif, dan berorientasi pada pertumbuhan jangka panjang.",
+        text_penutup_kontak:"PT ICX GLOBAL INDONESIA berkomitmen untuk terus mengembangkan aset dan perusahaan melalui pengelolaan modal internal yang terarah, strategi tepat, disiplin, integritas, dan profesionalisme. Kami berorientasi pada pertumbuhan serta penciptaan nilai perusahaan secara berkelanjutan. Terima kasih telah mempercayai PT ICX GLOBAL INDONESIA. Kami terus melangkah menjadi perusahaan yang profesional, adaptif, dan berorientasi pada pertumbuhan jangka panjang.",
         info_selengkapnya_pdf:"Informasi Selengkapnya :",
     },
     en: {
