@@ -57,7 +57,7 @@ const translations = {
         text_bidang_kegiatan:"The operational activities of PT ICX Global Indonesia focus on proprietary investment and portfolio management. We employ prudent asset allocation and rigorous risk management to safeguard the company’s capital. Our business foundation is strengthened by transparent market analysis, a commitment to long-term growth, and adaptive, data-driven decision-making. All business segments operate with complete financial independence, ensuring consistency in our corporate objectives and fostering sustainable growth.",
         struktur_organisasi_judul:"ORGANIZATIONAL STRUCTURE",
         text_penutup_kontak:"PT ICX GLOBAL INDONESIA is committed to continuously developing its assets and the company through focused internal capital management, measured strategies, discipline, integrity, and professionalism, all while prioritizing growth and the sustainable creation of corporate value. Thank you for getting to know PT ICX GLOBAL INDONESIA better. We continue to move forward in building a company that is professional, adaptive, and oriented toward long-term growth.",
-        info_selengkapnya_pdf:"Further Information :"
+        info_selengkapnya_pdf:"Further Information :",
     }
 };
 
